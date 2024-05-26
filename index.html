@@ -1,0 +1,2074 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Favicon Link -->
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.png" />
+    <!-- Flatpickr Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Albert Sans Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <!-- Plus Jakarta Sans Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap CSS Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap Icons Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Custom CSS Link -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- Header CSS Link -->
+    <link rel="stylesheet" href="styles/header.css">
+    <!-- Hero CSS Link -->
+    <link rel="stylesheet" href="styles/hero.css">
+    <!-- Reviews CSS Link -->
+    <link rel="stylesheet" href="styles/reviews.css">
+    <!-- Top States CSS Link -->
+    <link rel="stylesheet" href="styles/topstates.css">
+    <!-- Footer CSS Link -->
+    <link rel="stylesheet" href="styles/footer.css">
+    <!-- Main JS Link -->
+    <script defer src="scripts/main.js"></script>
+    <!-- Header JS Link -->
+    <script defer src="scripts/header.js"></script>
+    <!-- Footer JS Link -->
+    <script defer src="scripts/footer.js"></script>
+    <title>My Good Movers</title>
+</head>
+
+<body>
+    <!-- Scroll To Top Button -->
+    <div id="scrollToTopBtn" class="scroll-to-top-btn">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+    <!-- Modal Search -->
+    <div class="modal fade" id="searchCompanyModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h2 class="modal-title ms-auto fs-3" id="exampleModalLabel">Search Company</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <form action="" class="py-2" method="">
+                        <div class="input-group">
+                            <input type="search" placeholder="Search Companies" name="search" value=""
+                                class="form-control border-0">
+                            <span class="input-group-text bg-transparent border-0">
+                                <button type="submit" class="bg-transparent border-0" aria-label="search icon">
+                                    <i class="fa-solid fa-magnifying-glass" aria-label="icon"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header -->
+    <section
+        class="col-12 header d-flex align-items-center justify-content-between py-2 px-xl-5  px-lg-5  px-md-4 px-sm-2 px-2 overflow-x-hidden">
+        <div>
+            <a href="#" class="header-advertise">Advertise Your Company</a>
+        </div>
+        <div class="d-flex align-items-center justify-content-center gap-3">
+            <a href="#" class="header-icon d-sm-block d-none"><i class="bi bi-person-fill"></i></a>
+            <a href="#" class="header-company">Add your Company</a>
+        </div>
+    </section>
+    <!-- Scroll Navbar -->
+    <section class="container-fluid px-xl-5 px-lg-5 px-md-4 px-sm-2 px-2 scroll-navbar"
+        id="scroll-navbar">
+        <div class="col-12 py-3 d-flex align-items-center 
+    justify-content-center">
+            <div class="col-5 d-flex align-items-center 
+    justify-content-start scroll-navbar-logo">
+                <div class="col-5">
+                    <img src="assets/icons/LOGO.png" alt="Logo" class="img-fluid" width="150px" height="53px">
+                </div>
+                <div>
+                    <div class="input-group">
+                        <input type="search" class="form-control  border-end-0" name="search" value=""
+                            placeholder="Search Companies">
+                        <span class="input-group-text">
+                            <button type="submit" class="border-0 bg-transparent" aria-label="search button">
+                                <i class="fa-solid fa-magnifying-glass">
+                                </i>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-7 d-flex align-items-center justify-content-end gap-3 scroll-navbar-zip">
+                <div class="col-4">
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fa fa-building"></i></span>
+                        <input type="text" name="zip_from" id="zip_from_header" maxlength="5" class="form-control"
+                            value="" placeholder="Zip From" autocomplete="off">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fa fa-building"></i></span>
+                        <input type="text" name="zip_from" id="zip_from_header" maxlength="5" class="form-control"
+                            value="" placeholder="Zip To" autocomplete="off">
+                    </div>
+                </div>
+                <button type="button" class="scroll-navbar-btn col-3" data-bs-toggle="modal"
+                    data-bs-target="#modalForm">
+                    Get Free Quote
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Desktop Navbar -->
+    <section class="desktop-navbar px-xl-5 px-lg-5 px-md-4 px-sm-2 px-2 bg-white">
+        <nav class="navbar navbar-expand-lg col-12">
+            <div class="container-fluid p-0 col-12 d-flex align-items-center justify-content-center">
+                <div class="col-12 d-flex align-items-center justify-content-between canvas-content">
+                    <div>
+                        <a class="navbar-brand" href="#">
+                            <img src="assets/icons/LOGO.png" style="width: 150px; height: 53px;" alt="Logo">
+                        </a>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-end collapse navbar-collapse"
+                        id="navbarSupportedContent">
+                        <ul class="d-flex align-items-center justify-content-center navbar-nav">
+                            <!-- Item 1 -->
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Top Movers</a>
+                            </li>
+                            <!-- Item 2 -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Movers
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#">Local Movers</a></li>
+                                    <li><a class="dropdown-item" href="#">Long Distance Movers</a></li>
+                                    <li><a class="dropdown-item" href="#">Movers By Route</a></li>
+                                    <li><a class="dropdown-item" href="#">Top Moving Cities</a></li>
+                                </ul>
+                            </li>
+                            <!-- Item 3 -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Resources
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li class="dropdown-submenu dropend">
+                                        <a class="dropdown-item dropdown-toggle" href="#">Best Movers By Services</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Best Moving Companies</a></li>
+                                            <li><a class="dropdown-item" href="#">Best Local Moving Companies</a></li>
+                                            <li><a class="dropdown-item" href="#">Best Long Distance Moving
+                                                    Companies</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Best Cross-Country Moving
+                                                    Companies</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Best Container Moving Companies</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Best State-To-State Moving
+                                                    Companies</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Best Commercial Moving Companies</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Best Packing & Storage Moving
+                                                    Companies</a></li>
+                                            <li><a class="dropdown-item" href="#">Best Out-Of-State Moving Companies</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Best Short Distance Moving
+                                                    Companies</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Best Moving Labour Companies</a></li>
+                                            <li><a class="dropdown-item" href="#">Best Cheap Moving Companies</a></li>
+                                            <li><a class="dropdown-item" href="#">Best Truck rental Moving Companies</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Best Furniture Moving Companies</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Best Residential Moving Companies</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Best Antique Moving Companies</a></li>
+                                            <li><a class="dropdown-item" href="#">Best International Moving
+                                                    Companies</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Best Self Storage Moving Companies</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropend">
+                                        <a class="dropdown-item dropdown-toggle" href="#">Best Movers By State</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Best Moving Companies In Florida</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Best Moving Companies In
+                                                    California</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">best Moving Companies In New
+                                                    Jersey</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Best Moving Companies In Illinois</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Best Moving Companies In New York</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Best Moving Companies In Texas</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- Item 4 -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Certifications
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#">Certified Movers</a></li>
+                                    <li><a class="dropdown-item" href="#">Certified Brokers</a></li>
+                                </ul>
+                            </li>
+                            <!-- Item 5 -->
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">About Us</a>
+                            </li>
+                            <!-- Item 6 -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Blogs
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#">Moving Guide</a></li>
+                                    <li><a class="dropdown-item" href="#">Packing Tips</a></li>
+                                    <li><a class="dropdown-item" href="#">Moving Resources</a></li>
+                                    <li><a class="dropdown-item" href="#">City Guide</a></li>
+                                    <li><a class="dropdown-item" href="#">Storage Guide</a></li>
+                                </ul>
+                            </li>
+                            <!-- Item 7 -->
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">Free Moving Estimate</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+            </div>
+        </nav>
+    </section>
+    <!-- OffCanvas Navbar -->
+    <section class="offcanvas-navbar px-xl-5 px-lg-5 px-md-4 px-sm-2 px-2 bg-white overflow-hidden">
+        <nav class="navbar">
+            <div class="container-fluid offcanvas-main p-0">
+                <div class="col-4 d-flex align-items-center justify-content-start">
+                    <a href="#" class="offcanvas-user"><i class="bi bi-person-fill"></i></a>
+                </div>
+                <div class="col-4 d-flex align-items-center justify-content-center ">
+                    <a class="navbar-brand" href="#">
+                        <img src="assets/icons/LOGO.png" style="width: 150px; height: 53px;" alt="Logo">
+                    </a>
+                </div>
+                <div class="col-4  d-flex align-items-center justify-content-end gap-3">
+                    <button class="desktop-srch-btn off-srch" id="offcanvas-search-menu" data-bs-toggle="modal" data-bs-target="#searchCompanyModal">
+                        <i class="bi bi-search search-desktop"></i>
+                    </button>
+                    <button class="navbar-toggler offcanvas-btn" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                        aria-label="Toggle navigation">
+                        <svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="30" height="3"></rect>
+                            <rect y="10" width="30" height="3"></rect>
+                            <rect y="20" width="30" height="3"></rect>
+                        </svg>
+                    </button>
+                </div>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <a class="navbar-brand" href="#">
+                            <img src="assets/icons/LOGO.png" style="width: 150px; height: 53px;" alt="Logo">
+                        </a>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Top Movers</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Movers
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#">Local Movers</a></li>
+                                    <li><a class="dropdown-item" href="#">Long Distance Movers</a></li>
+                                    <li><a class="dropdown-item" href="#">Movers By Route</a></li>
+                                    <li><a class="dropdown-item" href="#">Top Moving Cities</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Resources
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li class="dropdown-submenu dropend">
+                                        <a class="dropdown-item dropdown-toggle" href="#">Best Movers By Services</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Best Moving Companies</a></li>
+                                            <li><a class="dropdown-item" href="#">Best Local Moving Companies</a></li>
+                                            <li><a class="dropdown-item" href="#">Best Long Distance Moving
+                                                    Companies</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Best Cross-Country Moving
+                                                    Companies</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Best Container Moving Companies</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Best State-To-State Moving
+                                                    Companies</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Best Commercial Moving Companies</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Best Packing & Storage Moving
+                                                    Companies</a></li>
+                                            <li><a class="dropdown-item" href="#">Best Out-Of-State Moving Companies</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Best Short Distance Moving
+                                                    Companies</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Best Moving Labour Companies</a></li>
+                                            <li><a class="dropdown-item" href="#">Best Cheap Moving Companies</a></li>
+                                            <li><a class="dropdown-item" href="#">Best Truck rental Moving Companies</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Best Furniture Moving Companies</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Best Residential Moving Companies</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Best Antique Moving Companies</a></li>
+                                            <li><a class="dropdown-item" href="#">Best International Moving
+                                                    Companies</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Best Self Storage Moving Companies</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu dropend">
+                                        <a class="dropdown-item dropdown-toggle" href="#">Best Movers By State</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Best Moving Companies In Florida</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Best Moving Companies In
+                                                    California</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">best Moving Companies In New
+                                                    Jersey</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Best Moving Companies In Illinois</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Best Moving Companies In New York</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Best Moving Companies In Texas</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">About Us</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Blogs
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#">Moving Guide</a></li>
+                                    <li><a class="dropdown-item" href="#">Packing Tips</a></li>
+                                    <li><a class="dropdown-item" href="#">Moving Resources</a></li>
+                                    <li><a class="dropdown-item" href="#">City Guide</a></li>
+                                    <li><a class="dropdown-item" href="#">Storage Guide</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">Write A Review</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">Free Moving Estimate</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Certifications
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#">Certified Movers</a></li>
+                                    <li><a class="dropdown-item" href="#">Certified Brokers</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">Login</a>
+                            </li>
+                        </ul>
+                        <button class="col-12 listing-btn">
+                            Add Listing
+                        </button>
+                        <form action="" class="offcanvas-search">
+                            <input type="text" name="" class="col-12" id="" placeholder="Search Companies">
+                            <button class="off-srch-i d-flex align-items-center  justify-content-center text-center">
+                                <i class="bi bi-search search-desktop"></i>
+                                <button />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <!-- Hero Section -->
+    <section
+        class="container-fluid d-flex flex-column align-items-lg-start align-items-center justify-content-lg-start justify-content-center hero-section px-xl-5 px-lg-5 px-md-4 px-sm-2 px-2 overflow-x-hidden">
+        <div class="row pt-md-5 pt-3">
+            <div class="col-auto">
+                <p class="hero-tag">Perfecting Your Relocation Journey</p>
+            </div>
+        </div>
+        <div class="row col-12 d-flex align-items-center justify-content-lg-start justify-content-center ">
+            <div
+                class="col-lg-6 d-flex align-items-center justify-content-center col-11 hero-tagline text-lg-start text-center">
+                <h1 class="col-lg-12 col-md-9">
+                    Discover The Finest Movers In Your Area
+                </h1>
+            </div>
+            <div
+                class="col-lg-6 col-11 hero-img d-flex align-items-center justify-content-lg-end justify-content-center ">
+                <div class="d-flex justify-content-lg-end justify-content-center  hero-img-container">
+                    <img src="https://mygoodmovers.com/assets/image/loader_man.webp" alt="Hero Banner"
+                        class="img-fluid">
+                </div>
+            </div>
+        </div>
+        <div class="row col-12 d-flex align-items-center justify-content-center quote-container py-4">
+            <div
+                class="col-12 quote-section d-flex align-items-center flex-lg-row flex-column justify-content-between py-lg-4 py-3 rounded-4 flex-wrap">
+                <div
+                    class="col-lg-auto col-12 d-flex align-items-center justify-content-center flex-column instant-quote">
+                    <h3 class="quote">Free Instant Quote</h3>
+                    <p class="star-warning">Fields Marked with an * are Required
+                    </p>
+                </div>
+                <div
+                    class="col-lg-auto col-12 quote-form-field flex-sm-row flex-column d-flex align-items-center justify-content-center gap-2">
+                    <div class="d-flex flex-column align-items-start justify-content-center flex-wrap q-f-1">
+                        <label for="">City You are Moving From*</label>
+                        <div class="input-group">
+                            <span class="input-group-text" id="basic-addon1">
+                                <i class="bi bi-building-fill"></i>
+                            </span>
+                            <input type="text" class="form-control" placeholder="City Name or Zip" aria-label="Username"
+                                aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column align-items-start justify-content-center flex-wrap q-f-2">
+                        <label for="">City You are Moving To*</label>
+                        <div class="input-group">
+                            <span class="input-group-text" id="basic-addon1">
+                                <i class="bi bi-building-fill"></i>
+                            </span>
+                            <input type="text" class="form-control" placeholder="City Name or Zip" aria-label="Username"
+                                aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="col-lg-auto col-12 d-flex align-items-center justify-content-center flex-column pt-lg-0 pt-3 quote-next">
+                    <div class="quote-save d-flex align-items-center justify-content-center">
+                        <p>Save Up to 40% Off Moving Costs</p>
+                    </div>
+                    <div class="col-12 d-flex align-items-center justify-content-center">
+                        <button class="quote-btn">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row col-12 collab-list d-flex align-items-center justify-content-center flex-wrap pb-3">
+            <div class="col-lg-8 d-flex align-items-center justify-content-center flex-wrap">
+                <img src="https://mygoodmovers.com/assets/image/companyLogo.webp" alt="Collaborators" class="img-fluid">
+            </div>
+        </div>
+    </section>
+    <!-- Reviews Section -->
+    <section
+        class="container-fluid px-xl-5 px-lg-5 px-md-4 px-sm-2 px-2 review-wrapper py-lg-5 py-sm-3  d-flex align-items-center justify-content-center overflow-x-hidden">
+        <div class="row col-12 d-flex align-items-start justify-content-center flex-wrap">
+            <!-- Left Section -->
+            <div
+                class="col-lg-7 col-12 reviews-main d-flex align-items-start justify-content-center flex-wrap flex-column">
+                <!-- Heading -->
+                <div class="row col-12 review-heading text-sm-start text-center">
+                    <h2 class="p-0">Latest Movers Reviews</h2>
+                </div>
+                <!-- Review Cards -->
+                <div class="col-12 review-cards-wrapper d-flex flex-column gap-4">
+                    <!-- Card 1 -->
+                    <a href="#" class="row review-card pt-3 px-1">
+                        <div class="card-top d-flex align-items-start justify-content-between flex-wrap">
+                            <div class="col-md-9 col-12 card-about">
+                                <div class="row">
+                                    <div
+                                        class="col-sm-3 col-12 d-flex align-items-center justify-content-center header-logo">
+                                        <div class="d-flex justify-content-center">
+                                            <img src="https://mygoodmovers.com/companies/logo/charter-van-lines-inc.webp"
+                                                alt="Charter Van Lines" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-sm-9 col-12 header-info position-relative d-flex align-items-start justify-content-center flex-column">
+                                        <h3>Charter Van Lines</h3>
+                                        <span>62 Reviews</span>
+                                        <ul
+                                            class="list-unstyled d-flex align-items-center justify-content-center gap-1">
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star-half-stroke"></i></li>
+                                            <li><i class="fa-regular fa-star"></i></li>
+                                            <li><span>(3.8/5)</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-dot pt-lg-0 pt-sm-2">
+                                <div class="col-md-12 col-12">
+                                    <p><span>US DOT: </span>2875673</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-bottom d-flex align-items-end justify-content-between flex-wrap">
+                            <div class="col-md-9 col-12 card-review">
+                                <div class="d-flex align-items-center justify-content-start gap-2">
+                                    <div><i class="fa-solid fa-circle-user"></i></div>
+                                    <div class="mt-1">
+                                        <h4>Bill Davis</h4>
+                                    </div>
+                                </div>
+                                <div class="review-text">
+                                    <p>Nothing but praise for them. They came in the same day, picked up my sofas and
+                                        delivered them safely! Honest,
+                                        <span>...Read More</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-12 quote-img d-md-block d-none">
+                                <div>
+                                    <img src="https://mygoodmovers.com/assets/image/quotation.png" alt="Quote Image"
+                                        class="img-fluid ">
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="col-12 review-card-cost d-flex align-items-sm-center align-items-start  justify-content-between flex-sm-row flex-column">
+                            <div class="card-cost d-flex align-items-center justify-content-start">
+                                <p>Move Cost: $4050</p>
+                            </div>
+                            <div class="card-location d-flex align-items-center justify-content-end">
+                                <p>Company Based In Florida</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Card 2 -->
+                    <a href="#" class="row review-card pt-3 px-1">
+                        <div class="card-top d-flex align-items-start justify-content-between flex-wrap">
+                            <div class="col-md-9 col-12 card-about">
+                                <div class="row">
+                                    <div
+                                        class="col-sm-3 col-12 d-flex align-items-center justify-content-center header-logo">
+                                        <div class="d-flex justify-content-center">
+                                            <img src="https://mygoodmovers.com/companies/logo/dumbo-moving-and-storage.jpg"
+                                                alt="Dumbo Moving & Storage" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-sm-9 col-12 header-info position-relative d-flex align-items-start justify-content-center flex-column">
+                                        <h3>Dumbo Moving and Storage</h3>
+                                        <span>121 Reviews</span>
+                                        <ul
+                                            class="list-unstyled d-flex align-items-center justify-content-center gap-1">
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star-half-stroke"></i></li>
+                                            <li><span>(4.4/5)</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-dot pt-lg-0 pt-sm-2">
+                                <div class="col-md-12 col-12">
+                                    <p><span>US DOT: </span>1543241</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-bottom d-flex align-items-end justify-content-between flex-wrap">
+                            <div class="col-md-9 col-12 card-review">
+                                <div class="d-flex align-items-center justify-content-start gap-2">
+                                    <div><i class="fa-solid fa-circle-user"></i></div>
+                                    <div class="mt-1">
+                                        <h4>Tal Ben Ami</h4>
+                                    </div>
+                                </div>
+                                <div class="review-text">
+                                    <p>Broke my countertop marble and refused to pay for it. Horrible claims department.
+                                        Poor estimate and poor comm
+                                        <span>...Read More</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-12 quote-img d-md-block d-none">
+                                <div>
+                                    <img src="https://mygoodmovers.com/assets/image/quotation.png" alt="Quote Image"
+                                        class="img-fluid ">
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="col-12 review-card-cost d-flex align-items-sm-center align-items-start  justify-content-between flex-sm-row flex-column">
+                            <div class="card-cost d-flex align-items-center justify-content-start">
+                                <p>Move Cost: $4120</p>
+                            </div>
+                            <div class="card-location d-flex align-items-center justify-content-end">
+                                <p>Company Based In New York</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Card 3 -->
+                    <a href="#" class="row review-card pt-3 px-1">
+                        <div class="card-top d-flex align-items-start justify-content-between flex-wrap">
+                            <div class="col-md-9 col-12 card-about">
+                                <div class="row">
+                                    <div
+                                        class="col-sm-3 col-12 d-flex align-items-center justify-content-center header-logo">
+                                        <div class="d-flex justify-content-center">
+                                            <img src="https://mygoodmovers.com/companies/logo/swift-shift-van-lines.png"
+                                                alt="Swift Shift Van Lines" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-sm-9 col-12 header-info position-relative d-flex align-items-start justify-content-center flex-column">
+                                        <h3>Swift Shift Van Lines</h3>
+                                        <span>96 Reviews</span>
+                                        <ul
+                                            class="list-unstyled d-flex align-items-center justify-content-center gap-1">
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star-half-stroke"></i></li>
+                                            <li><span>(5/5)</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-dot pt-lg-0 pt-sm-2">
+                                <div class="col-md-12 col-12">
+                                    <p><span>US DOT: </span>4149532</p>
+                                    <div class="review-verify">
+                                        <img src="https://mygoodmovers.com/assets/image/verified.svg"
+                                            alt="Verified Icon" width="16">
+                                        <span>Verified By MGM</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-bottom d-flex align-items-end justify-content-between flex-wrap">
+                            <div class="col-md-9 col-12 card-review">
+                                <div class="d-flex align-items-center justify-content-start gap-2">
+                                    <div><i class="fa-solid fa-circle-user"></i></div>
+                                    <div class="mt-1">
+                                        <h4>Lisa Graves</h4>
+                                    </div>
+                                </div>
+                                <div class="review-text">
+                                    <p>I paid for $4000 for 800 cubic square feet and they only allowed me 640 when
+                                        their subcontracted moving compan
+                                        <span>...Read More</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-12 quote-img d-md-block d-none">
+                                <div>
+                                    <img src="https://mygoodmovers.com/assets/image/quotation.png" alt="Quote Image"
+                                        class="img-fluid ">
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="col-12 review-card-cost d-flex align-items-sm-center align-items-start  justify-content-between flex-sm-row flex-column">
+                            <div class="card-cost d-flex align-items-center justify-content-start">
+                                <p>Move Cost: $4000</p>
+                            </div>
+                            <div class="card-location d-flex align-items-center justify-content-end">
+                                <p>Company Based In Florida</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Card 4 -->
+                    <a href="#" class="row review-card pt-3 px-1">
+                        <div class="card-top d-flex align-items-start justify-content-between flex-wrap">
+                            <div class="col-md-9 col-12 card-about">
+                                <div class="row">
+                                    <div
+                                        class="col-sm-3 col-12 d-flex align-items-center justify-content-center header-logo">
+                                        <div class="d-flex justify-content-center">
+                                            <img src="https://mygoodmovers.com/companies/logo/guaranteed-van-lines.webp"
+                                                alt="Guaranteed Van Lines" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-sm-9 col-12 header-info position-relative d-flex align-items-start justify-content-center flex-column">
+                                        <h3>Guaranteed Van Lines</h3>
+                                        <span>80 Reviews</span>
+                                        <ul
+                                            class="list-unstyled d-flex align-items-center justify-content-center gap-1">
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><span>(5/5)</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-dot pt-lg-0 pt-sm-2">
+                                <div class="col-md-12 col-12">
+                                    <p><span>US DOT: </span>4180511</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-bottom d-flex align-items-end justify-content-between flex-wrap">
+                            <div class="col-md-9 col-12 card-review">
+                                <div class="d-flex align-items-center justify-content-start gap-2">
+                                    <div><i class="fa-solid fa-circle-user"></i></div>
+                                    <div class="mt-1">
+                                        <h4>Arthur Ramsey</h4>
+                                    </div>
+                                </div>
+                                <div class="review-text">
+                                    <p>During our company's office relocation, they handled the assembly and disassembly
+                                        of furniture with excellent
+                                        <span>...Read More</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-12 quote-img d-md-block d-none">
+                                <div>
+                                    <img src="https://mygoodmovers.com/assets/image/quotation.png" alt="Quote Image"
+                                        class="img-fluid ">
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="col-12 review-card-cost d-flex align-items-sm-center align-items-start  justify-content-between flex-sm-row flex-column">
+                            <div class="card-cost d-flex align-items-center justify-content-start">
+                                <p>Move Cost: $3560</p>
+                            </div>
+                            <div class="card-location d-flex align-items-center justify-content-end">
+                                <p>Company Based In Florida</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Card 5 -->
+                    <a href="#" class="row review-card pt-3 px-1">
+                        <div class="card-top d-flex align-items-start justify-content-between flex-wrap">
+                            <div class="col-md-9 col-12 card-about">
+                                <div class="row">
+                                    <div
+                                        class="col-sm-3 col-12 d-flex align-items-center justify-content-center header-logo">
+                                        <div class="d-flex justify-content-center">
+                                            <img src="https://mygoodmovers.com/companies/logo/mayzlin-relocation-llc.webp"
+                                                alt="Mayzlin Relocation LLC" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-sm-9 col-12 header-info position-relative d-flex align-items-start justify-content-center flex-column">
+                                        <h3>Mayzlin Relocation LLC</h3>
+                                        <span>221 Reviews</span>
+                                        <ul
+                                            class="list-unstyled d-flex align-items-center justify-content-center gap-1">
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star-half-stroke"></i></li>
+                                            <li><span>(4.9/5)</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-dot pt-lg-0 pt-sm-2">
+                                <div class="col-md-12 col-12">
+                                    <p><span>US DOT: </span>3182355</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-bottom d-flex align-items-end justify-content-between flex-wrap">
+                            <div class="col-md-9 col-12 card-review">
+                                <div class="d-flex align-items-center justify-content-start gap-2">
+                                    <div><i class="fa-solid fa-circle-user"></i></div>
+                                    <div class="mt-1">
+                                        <h4>Edwin Rainey</h4>
+                                    </div>
+                                </div>
+                                <div class="review-text">
+                                    <p>They also volunteered to assist me with packing and unplugging my TV, so that was
+                                        one less stress for me.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-12 quote-img d-md-block d-none">
+                                <div>
+                                    <img src="https://mygoodmovers.com/assets/image/quotation.png" alt="Quote Image"
+                                        class="img-fluid ">
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="col-12 review-card-cost d-flex align-items-sm-center align-items-start  justify-content-between flex-sm-row flex-column">
+                            <div class="card-cost d-flex align-items-center justify-content-start">
+                                <p>Move Cost: $4050</p>
+                            </div>
+                            <div class="card-location d-flex align-items-center justify-content-end">
+                                <p>Company Based In North Carolina</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Card 6 -->
+                    <a href="#" class="row review-card pt-3 px-1">
+                        <div class="card-top d-flex align-items-start justify-content-between flex-wrap">
+                            <div class="col-md-9 col-12 card-about">
+                                <div class="row">
+                                    <div
+                                        class="col-sm-3 col-12 d-flex align-items-center justify-content-center header-logo">
+                                        <div class="d-flex justify-content-center">
+                                            <img src="https://mygoodmovers.com/companies/logo/united-express-moving-storage.webp"
+                                                alt="United Express Moving & Storage" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-sm-9 col-12 header-info position-relative d-flex align-items-start justify-content-center flex-column">
+                                        <h3>United Express Moving & Storage</h3>
+                                        <span>192 Reviews</span>
+                                        <ul
+                                            class="list-unstyled d-flex align-items-center justify-content-center gap-1">
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star-half-stroke"></i></li>
+                                            <li><span>(4.9/5)</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-dot pt-lg-0 pt-sm-2">
+                                <div class="col-md-12 col-12">
+                                    <p><span>US DOT: </span>4016566</p>
+                                    <div class="review-verify">
+                                        <img src="https://mygoodmovers.com/assets/image/verified.svg"
+                                            alt="Verified Icon" width="16">
+                                        <span>Verified By MGM</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-bottom d-flex align-items-end justify-content-between flex-wrap">
+                            <div class="col-md-9 col-12 card-review">
+                                <div class="d-flex align-items-center justify-content-start gap-2">
+                                    <div><i class="fa-solid fa-circle-user"></i></div>
+                                    <div class="mt-1">
+                                        <h4>Anthony Penaloza</h4>
+                                    </div>
+                                </div>
+                                <div class="review-text">
+                                    <p>Their immaculate and well-kept moving blankets guaranteed that my furniture would
+                                        remain spotless. I am so gra
+                                        <span>...Read More</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-12 quote-img d-md-block d-none">
+                                <div>
+                                    <img src="https://mygoodmovers.com/assets/image/quotation.png" alt="Quote Image"
+                                        class="img-fluid ">
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="col-12 review-card-cost d-flex align-items-sm-center align-items-start  justify-content-between flex-sm-row flex-column">
+                            <div class="card-cost d-flex align-items-center justify-content-start">
+                                <p>Move Cost: $5240</p>
+                            </div>
+                            <div class="card-location d-flex align-items-center justify-content-end">
+                                <p>Company Based In Florida</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Card 7 -->
+                    <a href="#" class="row review-card pt-3 px-1">
+                        <div class="card-top d-flex align-items-start justify-content-between flex-wrap">
+                            <div class="col-md-9 col-12 card-about">
+                                <div class="row">
+                                    <div
+                                        class="col-sm-3 col-12 d-flex align-items-center justify-content-center header-logo">
+                                        <div class="d-flex justify-content-center">
+                                            <img src="https://mygoodmovers.com/companies/logo/prime-line-vanlines-llc.webp"
+                                                alt="Prime Line VanLines LLC" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-sm-9 col-12 header-info position-relative d-flex align-items-start justify-content-center flex-column">
+                                        <h3>Prime Line VanLines LLC</h3>
+                                        <span>15 Reviews</span>
+                                        <ul
+                                            class="list-unstyled d-flex align-items-center justify-content-center gap-1">
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star-half-stroke"></i></li>
+                                            <li><span>(4.8/5)</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-dot pt-lg-0 pt-sm-2">
+                                <div class="col-md-12 col-12">
+                                    <p><span>US DOT: </span>4185489</p>
+                                    <div class="review-verify">
+                                        <img src="https://mygoodmovers.com/assets/image/verified.svg"
+                                            alt="Verified Icon" width="16">
+                                        <span>Verified By MGM</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-bottom d-flex align-items-end justify-content-between flex-wrap">
+                            <div class="col-md-9 col-12 card-review">
+                                <div class="d-flex align-items-center justify-content-start gap-2">
+                                    <div><i class="fa-solid fa-circle-user"></i></div>
+                                    <div class="mt-1">
+                                        <h4>Madi</h4>
+                                    </div>
+                                </div>
+                                <div class="review-text">
+                                    <p>WILL NOT COMMUNICATE - UNCLEAR ON pricing at the.
+                                        **I am hoping to update this when they finally contact u
+                                        <span>...Read More</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-12 quote-img d-md-block d-none">
+                                <div>
+                                    <img src="https://mygoodmovers.com/assets/image/quotation.png" alt="Quote Image"
+                                        class="img-fluid ">
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="col-12 review-card-cost d-flex align-items-sm-center align-items-start  justify-content-between flex-sm-row flex-column">
+                            <div class="card-cost d-flex align-items-center justify-content-start">
+                                <p>Move Cost: $2400</p>
+                            </div>
+                            <div class="card-location d-flex align-items-center justify-content-end">
+                                <p>Company Based In New Jersey</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Card 8 -->
+                    <a href="#" class="row review-card pt-3 px-1">
+                        <div class="card-top d-flex align-items-start justify-content-between flex-wrap">
+                            <div class="col-md-9 col-12 card-about">
+                                <div class="row">
+                                    <div
+                                        class="col-sm-3 col-12 d-flex align-items-center justify-content-center header-logo">
+                                        <div class="d-flex justify-content-center">
+                                            <img src="https://mygoodmovers.com/companies/logo/amex-moving-storage.webp"
+                                                alt="Swift Shift Van Lines" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-sm-9 col-12 header-info position-relative d-flex align-items-start justify-content-center flex-column">
+                                        <h3>Amex Moving &amp; Storage</h3>
+                                        <span>75 Reviews</span>
+                                        <ul
+                                            class="list-unstyled d-flex align-items-center justify-content-center gap-1">
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star-half-stroke"></i></li>
+                                            <li><span>(4.9/5)</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-dot pt-lg-0 pt-sm-2">
+                                <div class="col-md-12 col-12">
+                                    <p><span>US DOT: </span>3101918</p>
+                                    <div class="review-verify">
+                                        <img src="https://mygoodmovers.com/assets/image/verified.svg"
+                                            alt="Verified Icon" width="16">
+                                        <span>Verified By MGM</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-bottom d-flex align-items-end justify-content-between flex-wrap">
+                            <div class="col-md-9 col-12 card-review">
+                                <div class="d-flex align-items-center justify-content-start gap-2">
+                                    <div><i class="fa-solid fa-circle-user"></i></div>
+                                    <div class="mt-1">
+                                        <h4>Oz Oz</h4>
+                                    </div>
+                                </div>
+                                <div class="review-text">
+                                    <p>We used Amex for a recent move from New Jersey to Florida. From the first contact
+                                        Amex was very attentive, pro
+                                        <span>...Read More</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-12 quote-img d-md-block d-none">
+                                <div>
+                                    <img src="https://mygoodmovers.com/assets/image/quotation.png" alt="Quote Image"
+                                        class="img-fluid ">
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="col-12 review-card-cost d-flex align-items-sm-center align-items-start  justify-content-between flex-sm-row flex-column">
+                            <div class="card-cost d-flex align-items-center justify-content-start">
+                                <p>Move Cost: $4980</p>
+                            </div>
+                            <div class="card-location d-flex align-items-center justify-content-end">
+                                <p>Company Based In New Jersey</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Card 9 -->
+                    <a href="#" class="row review-card pt-3 px-1 position-relative">
+                        <div class="col-auto trusted-mover">
+                            <div>
+                                <img src="https://mygoodmovers.com/assets/image/company_watermark.png"
+                                    alt="Trusted Mover" class="img-fluid" width="16">
+                                <span>Trusted Mover</span>
+                            </div>
+                        </div>
+                        <div class="card-top d-flex align-items-start justify-content-between flex-wrap">
+                            <div class="trusted-mover">
+                                <div>
+                                    <img src="https://mygoodmovers.com/assets/image/company_watermark.png"
+                                        alt="Trusted Mover" class="img-fluid" width="16">
+                                    <span>Trusted Mover</span>
+                                </div>
+                            </div>
+                            <div class="col-md-9 col-12 card-about">
+                                <div class="row">
+                                    <div
+                                        class="col-sm-3 col-12 d-flex align-items-center justify-content-center header-logo">
+                                        <div class="d-flex justify-content-center">
+                                            <img src="https://mygoodmovers.com/companies/logo/safeway-moving-systems.webp"
+                                                alt="Safeway Moving Inc" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-sm-9 col-12 header-info position-relative d-flex align-items-start justify-content-center flex-column">
+                                        <h3>Safeway Moving Inc</h3>
+                                        <span>242 Reviews</span>
+                                        <ul
+                                            class="list-unstyled d-flex align-items-center justify-content-center gap-1">
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star-half-stroke"></i></li>
+                                            <li><span>(5/5)</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-dot pt-lg-0 pt-sm-2">
+                                <div class="col-md-12 col-12">
+                                    <p><span>US DOT: </span>37560000</p>
+                                    <div class="review-verify">
+                                        <img src="https://mygoodmovers.com/assets/image/verified.svg"
+                                            alt="Verified Icon" width="16">
+                                        <span>Verified By MGM</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-bottom d-flex align-items-end justify-content-between flex-wrap">
+                            <div class="col-md-9 col-12 card-review">
+                                <div class="d-flex align-items-center justify-content-start gap-2">
+                                    <div><i class="fa-solid fa-circle-user"></i></div>
+                                    <div class="mt-1">
+                                        <h4>Lisa Graves</h4>
+                                    </div>
+                                </div>
+                                <div class="review-text">
+                                    <p>I paid for $4000 for 800 cubic square feet and they only allowed me 640 when
+                                        their subcontracted moving compan
+                                        <span>...Read More</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-12 quote-img d-md-block d-none">
+                                <div>
+                                    <img src="https://mygoodmovers.com/assets/image/quotation.png" alt="Quote Image"
+                                        class="img-fluid ">
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="col-12 review-card-cost d-flex align-items-sm-center align-items-start  justify-content-between flex-sm-row flex-column">
+                            <div class="card-cost d-flex align-items-center justify-content-start">
+                                <p>Move Cost: $4000</p>
+                            </div>
+                            <div class="card-location d-flex align-items-center justify-content-end">
+                                <p>Company Based In Florida</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Card 10 -->
+                    <a href="#" class="row review-card pt-3 px-1">
+                        <div class="card-top d-flex align-items-start justify-content-between flex-wrap">
+                            <div class="col-md-9 col-12 card-about">
+                                <div class="row">
+                                    <div
+                                        class="col-sm-3 col-12 d-flex align-items-center justify-content-center header-logo">
+                                        <div class="d-flex justify-content-center">
+                                            <img src="https://mygoodmovers.com/companies/logo/cross-country-movers.webp"
+                                                alt="Cross Country Movers" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-sm-9 col-12 header-info position-relative d-flex align-items-start justify-content-center flex-column">
+                                        <h3>Cross Country Movers</h3>
+                                        <span>135 Reviews</span>
+                                        <ul
+                                            class="list-unstyled d-flex align-items-center justify-content-center gap-1">
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star-half-stroke"></i></li>
+                                            <li><span>(4.8/5)</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-dot pt-lg-0 pt-sm-2">
+                                <div class="col-md-12 col-12">
+                                    <p><span>US DOT: </span>2780116</p>
+                                    <div class="review-verify">
+                                        <img src="https://mygoodmovers.com/assets/image/verified.svg"
+                                            alt="Verified Icon" width="16">
+                                        <span>Verified By MGM</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-bottom d-flex align-items-end justify-content-between flex-wrap">
+                            <div class="col-md-9 col-12 card-review">
+                                <div class="d-flex align-items-center justify-content-start gap-2">
+                                    <div><i class="fa-solid fa-circle-user"></i></div>
+                                    <div class="mt-1">
+                                        <h4>James Anderson</h4>
+                                    </div>
+                                </div>
+                                <div class="review-text">
+                                    <p>The team demonstrated professionalism, friendliness, and willingness to move
+                                        oversized items, even helping sta
+                                        <span>...Read More</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-12 quote-img d-md-block d-none">
+                                <div>
+                                    <img src="https://mygoodmovers.com/assets/image/quotation.png" alt="Quote Image"
+                                        class="img-fluid ">
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="col-12 review-card-cost d-flex align-items-sm-center align-items-start  justify-content-between flex-sm-row flex-column">
+                            <div class="card-cost d-flex align-items-center justify-content-start">
+                                <p>Move Cost: $3620</p>
+                            </div>
+                            <div class="card-location d-flex align-items-center justify-content-end">
+                                <p>Company Based In Pennsylvania</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- Right Section -->
+            <div
+                class="col-lg-5 col-12 search-main d-flex align-items-start justify-content-center flex-wrap flex-column">
+                <!-- Heading -->
+                <div class="row col-12 search-heading text-sm-start text-center">
+                    <h2>Search For Best Movers</h2>
+                </div>
+                <!-- Input Field -->
+                <div class="col-12 input-group mt-3">
+                    <input type="search" class="form-control border" name="search" value=""
+                        placeholder="Search for Company">
+                    <span class="input-group-text">
+                        <button type="submit" aria-label="search button">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </span>
+                </div>
+                <!-- Top States Heading -->
+                <div class="row col-12 states-heading pt-4">
+                    <h2>Top Moving States</h2>
+                </div>
+                <!-- States Link -->
+                <div class="row col-12 states-link">
+                    <ul class="states-list list-unstyled">
+                        <li><a href="#">Movers In Florida (90)</a></li>
+                        <li><a href="#">Movers In California (39)</a></li>
+                        <li><a href="#">Movers In New Jersey (19)</a></li>
+                        <li><a href="#">Mover In Illinois (15)</a></li>
+                        <li><a href="#">Movers In New York (14)</a></li>
+                        <li><a href="#">Movers In Texas (14)</a></li>
+                        <li><a href="#">Movers In Virginia (10)</a></li>
+                        <li><a href="#">Movers In Massachusetts (9)</a></li>
+                        <li><a href="#">Movers In Maryland (8)</a></li>
+                        <li><a href="#">Movers In Washington (7)</a></li>
+                    </ul>
+                </div>
+                <!-- Cost Estimate -->
+                <div class="row col-12 cost-estimate d-flex flex-column gap-2">
+                    <div>
+                        <h3>Call Now for a Cost Estimate</h3>
+                    </div>
+                    <div class="text-lg-start text-center">
+                        <a href="#">
+                            <span><i class="bi bi-telephone-fill"></i></span>
+                            <span class="ms-2 ">(239) 799-6077</span>
+                        </a>
+                    </div>
+                    <div>
+                        <h5 class="">Available 24/7</h5>
+                    </div>
+                </div>
+                <!-- Moving Blogs -->
+                <div class="row col-12 moving-blogs d-flex flex-column">
+                    <div class="row py-4">
+                        <h4>Moving Blogs</h4>
+                    </div>
+                </div>
+                <!-- Blogs Cards -->
+                <div class="row blogs-cards d-flex align-items-center justify-content-center gap-3">
+                    <a href="#" class="row col-lg-11 col-12 d-flex align-items-start justify-content-center blog-card">
+                        <div class="blog-card-img col-md-4 col-12 d-flex align-items-center justify-content-center">
+                            <img src="https://mygoodmovers.com/posts/image/best-places-to-live-in-the-usa-2024.webp"
+                                alt="Blog Image" class="img-fluid">
+                        </div>
+                        <div class="col-md-8 col-12 pt-3 pt-sm-3 pt-md-0 pt-lg-0">
+                            <h6>Best Places to Live in the USA 2024</h6>
+                            <p>Published: 1 day ago</p>
+                        </div>
+                    </a>
+                    <a href="#" class="row col-lg-11 col-12 d-flex align-items-start justify-content-center blog-card">
+                        <div class="blog-card-img col-md-4 col-12 d-flex align-items-center justify-content-center">
+                            <img src="https://mygoodmovers.com/posts/image/how-much-to-tip-movers-etiquettes-considerations-and-more.webp"
+                                alt="Blog Image" class="img-fluid">
+                        </div>
+                        <div class="col-md-8 col-12 pt-3 pt-sm-3 pt-md-0 pt-lg-0">
+                            <h6>How Much to Tip Movers - Etiquettes, Considerations and More.
+                            </h6>
+                            <p>Published: 6 days ago</p>
+                        </div>
+                    </a>
+                    <a href="#" class="row col-lg-11 col-12 d-flex align-items-start justify-content-center blog-card">
+                        <div class="blog-card-img col-md-4 col-12 d-flex align-items-center justify-content-center">
+                            <img src="https://mygoodmovers.com/posts/image/where-how-and-why-should-you-donate-clothes.webp"
+                                alt="Blog Image" class="img-fluid">
+                        </div>
+                        <div class="col-md-8 col-12 pt-3 pt-sm-3 pt-md-0 pt-lg-0">
+                            <h6>Where, How, and Why Should You Donate Clothes
+                            </h6>
+                            <p>Published: 1 week ago</p>
+                        </div>
+                    </a>
+                    <a href="" class="row col-lg-11 col-12 d-flex align-items-start justify-content-center blog-card">
+                        <div class="blog-card-img col-md-4 col-12 d-flex align-items-center justify-content-center">
+                            <img src="https://mygoodmovers.com/posts/image/moving-straps-how-to-use-them.webp"
+                                alt="Blog Image" class="img-fluid">
+                        </div>
+                        <div class="col-md-8 col-12 pt-3 pt-sm-3 pt-md-0 pt-lg-0">
+                            <h6>Moving Straps – How to Use Them
+                            </h6>
+                            <p>Published: 2 weeks ago</p>
+                        </div>
+                    </a>
+                    <a href="#" class="row col-lg-11 col-12 d-flex align-items-start justify-content-center blog-card">
+                        <div class="blog-card-img col-md-4 col-12 d-flex align-items-center justify-content-center">
+                            <img src="https://mygoodmovers.com/posts/image/effective-move-out-cleaning-checklist.webp"
+                                alt="Blog Image" class="img-fluid">
+                        </div>
+                        <div class="col-md-8 col-12 pt-3 pt-sm-3 pt-md-0 pt-lg-0">
+                            <h6>Effective Move-Out Cleaning Checklist
+                            </h6>
+                            <p>Published: 2 weeks ago</p>
+                        </div>
+                    </a>
+                    <a href="#" class="row col-lg-11 col-12 d-flex align-items-start justify-content-center blog-card">
+                        <div class="blog-card-img col-md-4 col-12 d-flex align-items-center justify-content-center">
+                            <img src="https://mygoodmovers.com/posts/image/hand-truck-vs-dolly-which-one-to-choose.webp"
+                                alt="Blog Image" class="img-fluid">
+                        </div>
+                        <div class="col-md-8 col-12 pt-3 pt-sm-3 pt-md-0 pt-lg-0">
+                            <h6>Hand Truck vs Dolly – Which One to Choose</h6>
+                            <p>Published: 3 weeks ago</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Top Moving States Section Heading -->
+    <section
+        class="container-fluid px-xl-5 px-lg-5 px-md-4 px-sm-2 px-2 review-wrapper py-lg-3 py-sm-3 d-flex align-items-center justify-content-center flex-column top-states-main overflow-x-hidden">
+        <div class="row d-flex align-items-center justify-content-center text-center top-states-heading">
+            <div>
+                <h1>Top Moving States in USA</h1>
+            </div>
+        </div>
+    </section>
+    <!-- Top States Cards -->
+    <section
+        class="container-fluid px-xl-5 px-lg-5 px-md-4 px-sm-2 px-2 top-states-card-wrapper d-flex align-items-center justify-content-center overflow-x-hidden">
+        <div class="state-card-container py-3 px-3">
+            <a href="#" class="state-card">
+                <div><img src="https://mygoodmovers.com/states/movers/california.webp" alt="California"></div>
+                <div class="state-card-title">
+                    <h1>California</h1>
+                </div>
+            </a>
+            <a href="#" class="state-card">
+                <img src="https://mygoodmovers.com/states/movers/florida.webp" alt="Florida">
+                <div class="state-card-title">
+                    <h1>Florida</h1>
+                </div>
+            </a>
+            <a href="#" class="state-card">
+                <img src="https://mygoodmovers.com/states/movers/illinois.webp" alt="Illinois">
+                <div class="state-card-title">
+                    <h1>Illinois</h1>
+                </div>
+            </a>
+            <a href="#" class="state-card">
+                <img src="https://mygoodmovers.com/states/movers/maryland.webp" alt="Maryland">
+                <div class="state-card-title">
+                    <h1>Maryland</h1>
+                </div>
+            </a>
+            <a href="#" class="state-card">
+                <img src="https://mygoodmovers.com/states/movers/new-jersey.webp" alt="Maryland">
+                <div class="state-card-title">
+                    <h1>New Jersey</h1>
+                </div>
+            </a>
+            <a href="#" class="state-card">
+                <img src="https://mygoodmovers.com/states/movers/new-york.webp" alt="Maryland">
+                <div class="state-card-title">
+                    <h1>New York</h1>
+                </div>
+            </a>
+            <a href="#" class="state-card">
+                <img src="https://mygoodmovers.com/states/movers/texas.webp" alt="Maryland">
+                <div class="state-card-title">
+                    <h1>Texas</h1>
+                </div>
+            </a>
+            <a href="#" class="state-card">
+                <img src="https://mygoodmovers.com/states/movers/virginia.webp" alt="Maryland">
+                <div class="state-card-title">
+                    <h1>Virginia</h1>
+                </div>
+            </a>
+        </div>
+    </section>
+    <!-- Other Locations Button -->
+    <section
+        class="container-fluid px-xl-5 px-lg-5 px-md-4 px-sm-2 px-2 state-btn-container d-flex align-items-center justify-content-center py-4 overflow-x-hidden">
+        <div class="row d-flex align-items-center justify-content-center text-center state-btn">
+            <div>
+                <a href="#">SEE MORE LOCATIONS</a>
+            </div>
+        </div>
+    </section>
+    <!-- Reviews & Ratings Section -->
+    <section
+        class="container-fluid px-xl-5 px-lg-5 px-md-4 px-sm-2 px-2 state-btn-container d-flex align-items-center flex-lg-row flex-column justify-content-between review-rating-wrapper py-5 overflow-x-hidden">
+        <div
+            class="col-lg-6 col-12 review-rating-text d-flex align-items-lg-start justify-content-center align-items-center flex-column px-md-0 px-2">
+            <div>
+                <h1 class="text-md-start text-center">Moving Reviews & Ratings</h1>
+            </div>
+            <div>
+                <p class="text-md-start text-center">Transparent moving reviews and ratings play a crucial role in
+                    helping people make an informed
+                    decision who are seeking the best movers in their area. My Good Movers has established as a
+                    trustworthy platform dedicated to offering transparent and unbiased comprehensive reviews and
+                    ratings.</p>
+                <p class="text-md-start text-center">When it comes to making move easier, selecting the right moving
+                    company can make a huge
+                    difference. We understand all the moving hassle and ensure every consumer have access to the
+                    genuine feedback shared by others. You can also share the review of a moving company that you
+                    have used on our platform and read what others think of that moving company. Our moving reviews
+                    are your reliable source to make your relocation experience smoother and easier.</p>
+            </div>
+        </div>
+        <div
+            class="col-lg-6 col-12 review-rating-img d-flex align-items-center justify-content-lg-end justify-content-center px-md-0 px-2">
+            <div class="d-flex align-items-center justify-content-lg-end justify-content-center ">
+                <img src="https://mygoodmovers.com/assets/image/Moving-Reviews-&-Rating.webp" alt="Reviews & Ratings"
+                    class="img-fluid">
+            </div>
+        </div>
+    </section>
+    <!-- Services Section -->
+    <section
+        class="container-fluid px-xl-5 px-lg-5 px-md-4 px-sm-2 px-2 state-btn-container d-flex align-items-center justify-content-center services-wrapper overflow-x-hidden">
+        <div class="row d-flex align-items-center justify-content-center text-center services-heading">
+            <h1>Offering Services</h1>
+        </div>
+    </section>
+    <!-- Services Cards Section -->
+    <section
+        class="container-fluid px-xl-5 px-lg-5 px-md-4 px-sm-2 px-2 services-card-wrapper d-flex align-items-center justify-content-center overflow-x-hidden">
+        <div class="services-card-container py-5 px-3">
+            <a href="#" class="service-card">
+                <div>
+                    <h3>Local Move Experts</h3>
+                </div>
+                <div class="service-card-text">
+                    <p>
+                        We are the best platform to find certified local move experts in your area. We connect you with
+                        professionals who know your neighborhood and make your local move smooth.
+                    </p>
+                </div>
+            </a>
+            <a href="#" class="service-card">
+                <div>
+                    <h3>Long-Distance Movers</h3>
+                </div>
+                <div class="service-card-text">
+                    <p>
+                        If you are planning to move to another city or state, we are your one-stop shop for
+                        discovering
+                        the best long-distance moving experts in your area who will make your move a breeze.
+                    </p>
+                </div>
+            </a>
+            <a href="#" class="service-card">
+                <div>
+                    <h3>International Movers</h3>
+                </div>
+                <div class="service-card-text">
+                    <p>
+                        We are your trusted source for finding the best international movers near your area. With us,
+                        you
+                        can discover top movers who specialize in solving the complexities of overseas relocations,
+                        ensuring a smooth transition.
+                    </p>
+                </div>
+            </a>
+            <a href="#" class="service-card">
+                <div>
+                    <h3>Vehicle <br> Transport</h3>
+                </div>
+                <div class="service-card-text">
+                    <p>
+                        Shipping your vehicle is the most hectic task, but we connect you with professionals who
+                        specialize in safely and efficiently transporting your vehicles to your desired destination.
+                    </p>
+                </div>
+            </a>
+            <a href="#" class="service-card">
+                <div>
+                    <h3>Office Move Specialists</h3>
+                </div>
+                <div class="service-card-text">
+                    <p>
+                        We are your go-to platform for locating expert moving specialists in your area. We help you
+                        finalize professional movers who understand the unique challenges of relocating businesses.
+                    </p>
+                </div>
+            </a>
+            <a href="#" class="service-card">
+                <div>
+                    <h3>Professional Moving Assistance</h3>
+                </div>
+                <div class="service-card-text">
+                    <p>
+                        If you are looking for professional moving assistance, we provide you with transparent
+                        insights
+                        from skilled professionals who will make your move a hassle-free experience.
+                    </p>
+                </div>
+            </a>
+            <a href="#" class="service-card">
+                <div>
+                    <h3>Self-Service Movers</h3>
+                </div>
+                <div class="service-card-text">
+                    <p>
+                        Pack by yourself and save your moving expenses. We link you with reliable self-service movers
+                        in
+                        your area who provide the flexibility and control you desire for your move.
+                    </p>
+                </div>
+            </a>
+            <a href="#" class="service-card">
+                <div>
+                    <h3>Storage Facilities</h3>
+                </div>
+                <div class="service-card-text">
+                    <p>
+                        Keep your valuable assets safe and secure with proper storage facilities. We connect you with
+                        the
+                        most reputable storage providers in your area, ensuring your belongings are safe and
+                        accessible
+                        whenever you need them.
+                    </p>
+                </div>
+            </a>
+            <a href="#" class="service-card">
+                <div>
+                    <h3>Small Moves</h3>
+                </div>
+                <div class="service-card-text">
+                    <p>
+                        If you are considering moving to the next door or a new space nearby. We are your reliable
+                        source
+                        for finding the right professionals in your area. They specialize in handling smaller
+                        relocations with ease.
+                    </p>
+                </div>
+            </a>
+            <a href="#" class="service-card">
+                <div>
+                    <h3>Special Move Experts</h3>
+                </div>
+                <div class="service-card-text">
+                    <p>
+                        Moving special items is a daunting endeavor. That’s why we help you find the best special
+                        move
+                        experts who excel in handling special items like musical instruments and antique pieces. .
+                    </p>
+                </div>
+            </a>
+            <a href="#" class="service-card">
+                <div>
+                    <h3>Truck Rentals</h3>
+                </div>
+                <div class="service-card-text">
+                    <p>
+                        Performing a DIY move and renting a moving truck is an essential aspect. We provide a wide
+                        range
+                        of trusted truck rental providers in your area to fulfill your moving needs and demands.
+                    </p>
+                </div>
+            </a>
+            <a href="#" class="service-card">
+                <div>
+                    <h3>Moving Supplies</h3>
+                </div>
+                <div class="service-card-text">
+                    <p>
+                        My Good Movers is your go-to option to make your relocation easier and stress-free. We
+                        connect
+                        you with reputable moving suppliers in your area, providing high-end boxes and packing
+                        materials.
+                    </p>
+                </div>
+            </a>
+        </div>
+    </section>
+    <!-- Write Review -->
+    <section
+        class="container-fluid px-xl-5 px-lg-5 px-md-4 px-sm-2 px-2 write-review-wrapper d-flex align-items-center flex-lg-row flex-column justify-content-between overflow-x-hidden">
+        <div class="col-lg-4 col-12 d-flex align-items-lg-start align-items-center justify-content-center">
+            <div>
+                <img src="https://mygoodmovers.com/assets/image/land-review.webp" alt="Write Review" class="img-fluid">
+            </div>
+        </div>
+        <div
+            class="col-lg-8 col-12 d-flex align-items-lg-start align-items-center justify-content-center px-lg-5 pt-lg-0 pt-3">
+            <div
+                class="write-review-text d-flex align-items-lg-start align-items-center justify-content-center flex-column">
+                <h1 class="text-lg-start text-center">Write a Review. Share your Story.</h1>
+                <p class="col-9 text-lg-start text-center">By composing a review for your moving company, you can
+                    express your perspective on the
+                    company's
+                    overall performance
+                    during your household relocation. Your feedback can serve as a valuable resource for individuals
+                    intending to relocate,
+                    aiding them in avoiding scam movers.</p>
+                <button><a href="#">Give a Review</a></button>
+            </div>
+        </div>
+    </section>
+    <!-- Reliability Section -->
+    <section
+        class="container-fluid px-xl-5 px-lg-5 px-md-4 px-sm-2 px-2 state-btn-container d-flex align-items-center flex-lg-row flex-column justify-content-between reliability-wrapper py-5 overflow-x-hidden">
+        <div
+            class="col-lg-6 col-12 reliability-text d-flex align-items-lg-start justify-content-center align-items-center flex-column px-md-0 px-2">
+            <div>
+                <h1 class="text-md-start text-center">Ensuring the Reliability of Our Data</h1>
+            </div>
+            <div>
+                <p class="text-md-start text-center">
+                    My Good Movers the providing reliable and trustworthy information about moving companies is embedded
+                    in accurate and
+                    transparent review process. We carefully gather feedback from authentic customers who have
+                    experienced the services of
+                    these moving companies. We then verify the authenticity of each review to ensure that only reliable
+                    and unbiased reviews
+                    are included in our database.
+                </p>
+                <p class="text-md-start text-center">
+                    Furthermore, our dedication to data reliability extends to the timeliness of our reviews. We keep
+                    our database updated
+                    to reflect the most current and relevant information about moving companies. This ensures that
+                    prospective customers can
+                    make informed decisions based on the latest feedback and performance of these companies.
+                </p>
+            </div>
+        </div>
+        <div
+            class="col-lg-6 col-12 reliability-img d-flex align-items-center justify-content-lg-end justify-content-center px-md-0 px-2">
+            <div class="d-flex align-items-center justify-content-lg-end justify-content-center ">
+                <img src="https://mygoodmovers.com/assets/image/Data-Relaible.webp" alt="Reviews & Ratings"
+                    class="img-fluid">
+            </div>
+        </div>
+    </section>
+    <!-- Latest Blogs Heading -->
+    <section
+        class="container-fluid px-xl-5 px-lg-5 px-md-4 px-sm-2 px-2 blogs-card-wrapper d-flex align-items-center justify-content-start overflow-x-hidden">
+        <div class="row px-3 latest-blogs">
+            <h1>Latest Blogs</h1>
+        </div>
+    </section>
+    <!-- Latest Blogs Section -->
+    <section
+        class="container-fluid px-xl-5 px-lg-5 px-md-4 px-sm-2 px-2 blogs-card-wrapper d-flex align-items-center justify-content-center overflow-x-hidden">
+        <div class="blogs-card-container py-sm-5 py-3 px-3">
+            <a href="#" class="blogs-card d-flex flex-column gap-3">
+                <div>
+                    <img src="https://mygoodmovers.com/posts/image/best-places-to-live-in-the-usa-2024.webp"
+                        alt="Blog Image" class="img-fluid rounded-3">
+                </div>
+                <div>
+                    <span>Published: 2 days ago</span>
+                    <h4 class="pt-1">Best Places to Live in the USA 2024</h4>
+                    <p>
+                        Find your ideal place to live in the USA! From family-friendly neighborhoods to outdoor
+                        enthusiast havens, our guide has
+                        you covered<other>...Read More</other>
+                    </p>
+                </div>
+            </a>
+            <a href="#" class="blogs-card d-flex flex-column gap-3">
+                <div>
+                    <img src="https://mygoodmovers.com/posts/image/how-much-to-tip-movers-etiquettes-considerations-and-more.webp"
+                        alt="Blog Image" class="img-fluid rounded-3">
+                </div>
+                <div>
+                    <span>Published: 1 week ago</span>
+                    <h4 class="pt-1">
+                        How Much to Tip Movers - Etiquettes, Considerations and More.
+                    </h4>
+                    <p>
+                        Confused how much to tip movers? From long-distance to piano movers, discover the ins and outs
+                        of tipping etiquette.
+                        Learn to tip based on distance, job size, and quality.
+                        <other>...Read More</other>
+                    </p>
+                </div>
+            </a>
+            <a href="#" class="blogs-card d-flex flex-column gap-3">
+                <div>
+                    <img src="https://mygoodmovers.com/posts/image/where-how-and-why-should-you-donate-clothes.webp"
+                        alt="Blog Image" class="img-fluid rounded-3">
+                </div>
+                <div>
+                    <span>Published: 1 week ago</span>
+                    <h4 class="pt-1">Where, How, and Why Should You Donate Clothes</h4>
+                    <p>
+                        Do you have extra clothes in your cupboard that you need to donate before moving? Learn how to
+                        donate clothing easily
+                        and discover practical strategies, tips, and more.
+                        <other>...Read More</other>
+                    </p>
+                </div>
+            </a>
+            <a href="#" class="blogs-card d-flex flex-column gap-3">
+                <div>
+                    <img src="https://mygoodmovers.com/posts/image/moving-straps-how-to-use-them.webp" alt="Blog Image"
+                        class="img-fluid rounded-3">
+                </div>
+                <div>
+                    <span>Published: 2 weeks ago</span>
+                    <h4 class="pt-1">Moving Straps – How to Use Them</h4>
+                    <p>
+                        Learn expert tips and techniques for using moving straps effectively. Read about Types, usage
+                        and how to lift heavy
+                        items with moving straps. Learn More.
+                        <other>...Read More</other>
+                    </p>
+                </div>
+            </a>
+        </div>
+    </section>
+    <!-- Help Section -->
+    <section
+        class="container-fluid px-xl-5 px-lg-5 px-md-4 px-sm-2 px-2 state-btn-container d-flex align-items-center justify-content-center help-wrapper py-md-4 py-2 overflow-x-hidden">
+        <a href="#"
+            class="row col-12 help-content-wrapper d-flex align-items-center justify-content-center flex-column">
+            <div>
+                <h1 class="text-center">
+                    Do you need help with your upcoming move? <br>
+                    Call Us Now <strong style="text-decoration: underline;">(239) 799-6077</strong>
+                </h1>
+            </div>
+            <div>
+                <p class="text-center">Get a Free Quote and Moving Consultation. We are available 24/7.</p>
+            </div>
+
+        </a>
+    </section>
+    <!-- Footer Links Section -->
+    <section
+        class="container-fluid px-xl-5 px-lg-5 px-md-4 px-sm-2 px-2 footer-wrapper d-flex align-items-center justify-content-center py-md-5 py-2 overflow-x-hidden">
+        <div class="row col-12 border-primary d-flex align-items-start justify-content-start flex-wrap px-lg-0 px-3">
+            <div
+                class="col-lg-3 col-md-6 col-12 footer-1 p-0 m-0 d-flex align-items-md-start align-items-center justify-content-center flex-column pt-lg-0 pt-3">
+                <a href="#">
+                    <img src="assets/icons/LOGO.png" alt="Logo" class="img-fluid" width="150px" height="53px">
+                </a>
+                <h4 class="mt-3">E-Mail</h4>
+                <a href="#" class="e-mail">contact@mygoodmovers.com</a>
+                <div class="footer-1-socials d-flex align-items-center justify-content-start gap-2 mt-4">
+                    <a href="">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-pinterest-p"></i>
+                    </a>
+                </div>
+                <div class="input-group mt-4">
+                    <input type="search" class="form-control" name="search" value="" placeholder="Search for Company">
+                    <span class="input-group-text bg-transparent border-0">
+                        <button type="submit" class="bg-transparent border-0" aria-label="search button">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12 footer-links ps-lg-4 ps-0 pt-lg-0 pt-3">
+                <h1 class="footer-links-heading">Links</h1>
+                <ul class="list-unstyled p-0 m-0">
+                    <li>
+                        <a href="#">Blogs</a>
+                    </li>
+                    <li>
+                        <a href="#">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="#">Write a Review</a>
+                    </li>
+                    <li>
+                        <a href="#">Sitemap</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12 footer-links ps-lg-4 ps-0 pt-lg-0 pt-3">
+                <h1 class="footer-links-heading">Movers</h1>
+                <ul class="list-unstyled p-0 m-0">
+                    <li>
+                        <a href="#">Movers In USA</a>
+                    </li>
+                    <li>
+                        <a href="#">long Distance Movers</a>
+                    </li>
+                    <li>
+                        <a href="#">Local Movers</a>
+                    </li>
+                    <li>
+                        <a href="#">Movers By Route</a>
+                    </li>
+                    <li>
+                        <a href="#">Best Moving Companies</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12 footer-links ps-lg-4 ps-0 pt-lg-0 pt-3">
+                <h1 class="footer-links-heading">For Business</h1>
+                <ul class="list-unstyled p-0 m-0">
+                    <li>
+                        <a href="#">Login</a>
+                    </li>
+                    <li>
+                        <a href="#">Add Business</a>
+                    </li>
+                    <li>
+                        <a href="#">Advertise Your Company</a>
+                    </li>
+                    <li>
+                        <a href="#">Certified Movers</a>
+                    </li>
+                    <li>
+                        <a href="#">Certified Brokers</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Privacy -->
+    <section
+        class="container-fluid px-xl-5 px-lg-5 px-md-4 px-sm-2 px-2 footer-bottom d-flex align-items-center justify-content-center flex-wrap flex-lg-row flex-column pb-lg-3 overflow-x-hidden">
+        <div
+            class="col-lg-6 col-12 footer-copyright d-flex align-items-center justify-content-center justify-content-lg-start text-center px-3">
+            <span>Copyright © 2024 MyGoodMovers.com. All Rights Reserved.</span>
+        </div>
+        <div
+            class="col-lg-6 col-12 footer-privacy d-flex align-items-center justify-content-center justify-content-lg-end pt-lg-0 pt-2 gap-1 text-center px-2">
+            <a href="">Privacy Policy</a>
+            <span>|</span>
+            <a href="">Terms & Conditions</a>
+        </div>
+    </section>
+    <!-- Mobile Footer -->
+    <section
+        class="container-fluid d-flex align-items-center justify-content-center d-md-none d-block mobile-footer px-3">
+        <div class="col-12 d-flex align-items-center justify-content-between">
+            <div id="findMovers"
+                class="col-5 d-flex align-items-center justify-content-center flex-column footer-section py-1">
+                <div>
+                    <i class="fa-solid fa-truck"></i>
+                </div>
+                <span>Find Movers</span>
+                <div class="hidden-content mover-input">
+                    <input id="searchCompany" type="text" class="mt-2" placeholder="Search Company">
+                </div>
+            </div>
+            <div id="quoteByPhone"
+                class="col-5 d-flex align-items-center justify-content-center flex-column footer-section py-1"
+                data-bs-toggle="modal" data-bs-target="#quoteByPhoneModal">
+                <div>
+                    <i class="fa-solid fa-calculator"></i>
+                </div>
+                <span>Quote By Phone</span>
+            </div>
+        </div>
+    </section>
+    <!-- Modal -->
+    <div class="modal fade" id="quoteByPhoneModal" data-bs-backdrop="static" tabindex="-1"
+        aria-labelledby="quoteByPhoneModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <img src="assets/icons/LOGO.png" alt="Logo" class="img-fluid" width="150px" height="53px">
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div
+                    class="col-12 d-flex align-items-center justify-content-center flex-column text-center mt-3 modal-headings">
+                    <div>
+                        <h1 class="text-center">Let's Get You Moved</h1>
+                    </div>
+                    <div>
+                        <h2 class="text-center">Top Rated Companies!</h2>
+                    </div>
+                </div>
+                <form action="" method="">
+                    <input type="hidden" name="_token" value="">
+                    <div class="modal-body">
+                        <!-- Step 1 -->
+                        <div id="form-field-one" class="form-step">
+                            <div class="mb-3">
+                                <label for="zip_from" class="form-label">City You Are Moving
+                                    From<span class="text-danger fw-bold">*</span></label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <i class="fa fa-building"></i>
+                                    </span>
+                                    <input type="text" id="zip_from" name="zip_from" class="form-control" value=""
+                                        placeholder="City Name Or Zip From" maxlength="5" aria-describedby=""
+                                        autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="zip_to" class="form-label">City You Are Moving To<span
+                                        class="text-danger fw-bold">*</span></label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <i class="fa fa-building"></i>
+                                    </span>
+                                    <input type="text" id="zip_to" name="zip_to" class="form-control" value=""
+                                        placeholder="City Name Or Zip To" maxlength="5" aria-describedby=""
+                                        autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="text-end">
+                                <button type="button" class="btn modal-blue-button" id="next_btn">Next</button>
+                            </div>
+                        </div>
+                        <!-- Step 2 -->
+                        <div id="form-field-two" class="form-step d-none">
+                            <div class="mb-3">
+                                <label for="moveDate" class="form-label">Moving Date<span
+                                        class="text-danger fw-bold">*</span></label>
+                                <div class="input-group">
+                                    <span class="input-group-text" aria-label="calendar-icon" id="calendar">
+                                        <i class="fa-solid fa-calendar-days">
+                                        </i>
+                                    </span>
+                                    <input type="text" id="moveDate" name="date" value=""
+                                        class="form-control flatpickr-input" placeholder="Moving Date" readonly>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="move_size" class="form-label">Move Size<span
+                                        class="text-danger fw-bold">*</span></label>
+                                <div class="input-group">
+                                    <span class="input-group-text" aria-label="select-box-icon"><i
+                                            class="fa fa-box"></i></span>
+                                    <select name="move_size" id="move_size" class="form-select">
+                                        <option selected="" value="">
+                                            Select Move Size
+                                        </option>
+                                        <option value="4 Bedroom Home">4 Bedroom Home</option>
+                                        <option value="3 Bedroom Home">3 Bedroom Home</option>
+                                        <option value="2 Bedroom Home">2 Bedroom Home</option>
+                                        <option value="1 Bedroom Home">1 Bedroom Home</option>
+                                        <option value="Apartment Move">Apartment Move</option>
+                                        <option value="Residential Move">Residential Move</option>
+                                        <option value="Studio Move">Studio Move</option>
+                                        <option value="Office Move">Office Move</option>
+                                        <option value="Commercial Move">Commercial Move</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="text-end">
+                                <button type="button" class="btn modal-prev-button" id="prev_btn">Previous</button>
+                                <button type="button" class="btn modal-blue-button" id="next_two">Next</button>
+                            </div>
+                        </div>
+                        <!-- Step 3 -->
+                        <div id="form-field-three" class="form-step d-none">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name<span
+                                        class="text-danger fw-bold ">*</span></label>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" aria-label="user-icon" id="user-name"><i
+                                            class="fa-solid fa-user"></i></span>
+                                    <input type="text" name="name" id="name" value="" class="form-control"
+                                        placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email<span class="text-danger fw-bold">*
+                                        </sp></label>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" aria-label="email-icon" id="user-email"><i
+                                            class="fa-solid fa-envelope"></i></span>
+                                    <input type="email" id="email" name="email" value="" class="form-control"
+                                        placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone_no" class="form-label">Phone Number<span class="text-danger fw-bold">*
+                                    </span></label>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" aria-label="phone-number-icon" id="phone-number"><i
+                                            class="fa-solid fa-phone"></i></span>
+                                    <input type="tel" id="phone_no" name="phone_no" value="" maxlength="16"
+                                        class="form-control " placeholder="Phone No">
+                                </div>
+                            </div>
+                            <div class="text-end">
+                                <button type="button" class="btn modal-prev-button" id="prev_two">Previous</button>
+                                <button type="submit" class="btn modal-blue-button">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="modal-footer text-center d-flex align-items-center justify-content-center">
+                    <p class="text-center m-0">Fields Marked with <span class="text-danger fw-bold">*</span> are
+                        Mandatory.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- FlatPickr -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- Bootstrap JS Link -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <!-- Font Awesome Link -->
+    <script src="https://kit.fontawesome.com/373a11286c.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

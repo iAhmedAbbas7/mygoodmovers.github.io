@@ -1,0 +1,288 @@
+/* Top States Styles */
+.top-states-heading h1 {
+  font-family: var(--albert);
+  font-weight: 700;
+  font-size: 2rem;
+}
+@media (max-width: 575px) {
+  .top-states-heading h1 {
+    font-size: 1.5rem;
+  }
+}
+.state-card-container {
+  display: grid;
+  gap: 2rem; /* Adjust the gap between cards as needed */
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (min-width: 992px) {
+  .state-card-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.state-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #f8f9fa;
+  transition: transform 0.3s ease-in-out;
+}
+.state-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
+.state-card-title {
+  position: absolute;
+  text-align: center;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: var(--albert);
+  font-weight: 600;
+  font-size: 36px;
+  background: rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.state-card:hover {
+  transform: scale(1.08);
+}
+
+.state-card:hover .state-card-title {
+  background: rgba(0, 0, 0, 0);
+  transform: scale(1.08);
+}
+.state-btn a {
+  background-color: var(--primary);
+  color: white;
+  font-family: var(--albert);
+  font-weight: 700;
+  padding: 10px 30px;
+  border-radius: 4px;
+  font-size: 1.1rem;
+}
+.state-btn a:hover {
+  color: var(--secondary);
+}
+.review-rating-text h1 {
+  font-family: var(--albert);
+  color: var(--secondary);
+  font-size: 44px;
+  font-weight: 800;
+}
+.review-rating-text p {
+  font-family: var(--jakarta);
+  font-size: 18px;
+  font-weight: 400;
+  color: #000000bf;
+  line-height: 30px;
+  letter-spacing: 0.3px;
+}
+.review-rating-img img {
+  object-fit: cover;
+  height: auto;
+  width: 70%;
+}
+@media (min-width: 300px) and (max-width: 480px) {
+  .review-rating-text h1 {
+    font-size: 24px;
+  }
+}
+.services-heading h1 {
+  font-family: var(--albert);
+  font-weight: 700;
+  font-size: 42px;
+  color: var(--secondary);
+}
+.services-card-container {
+  display: grid;
+  gap: 2rem; /* Adjust the gap between cards as needed */
+  grid-template-columns: repeat(2, 1fr);
+  align-items: stretch;
+}
+@media (min-width: 992px) {
+  .services-card-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 575px) {
+  .services-card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.service-card {
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  border: 2px solid #00000038;
+  text-align: center;
+  box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 1rem;
+}
+.service-card:hover {
+  transform: translateY(-12px);
+}
+.service-card h3 {
+  font-family: var(--albert);
+  font-weight: 600;
+  color: var(--secondary);
+  font-size: 28px;
+  line-height: 32px;
+}
+.service-card-text {
+  flex-grow: 1;
+}
+.service-card p {
+  font-family: var(--jakarta);
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  color: #2a2f32;
+  line-height: 26px;
+}
+.write-review-wrapper {
+  background-color: var(--primary);
+  padding-block: 4rem;
+}
+.write-review-text h1 {
+  font-weight: 700;
+  color: white;
+  font-family: var(--albert);
+  font-size: 2rem;
+}
+.write-review-text p {
+  color: white;
+  font-weight: 400;
+  font-family: var(--jakarta);
+  font-size: 16px;
+}
+.write-review-text button {
+  background-color: var(--secondary);
+  border: none;
+  outline: none;
+  font-family: var(--jakarta);
+  color: white;
+  background-color: var(--secondary);
+  padding: 8px 20px;
+  border-radius: 4px;
+  letter-spacing: 0.4px;
+}
+.write-review-text button a {
+  color: white;
+}
+.reliability-text h1 {
+  font-family: var(--albert);
+  color: var(--secondary);
+  font-size: 44px;
+  font-weight: 800;
+}
+.reliability-text p {
+  font-family: var(--jakarta);
+  font-size: 18px;
+  font-weight: 400;
+  color: #000000bf;
+  line-height: 30px;
+  letter-spacing: 0.3px;
+}
+.reliability-img img {
+  object-fit: cover;
+  height: auto;
+  width: 70%;
+}
+@media (min-width: 300px) and (max-width: 480px) {
+  .reliability-text h1 {
+    font-size: 24px;
+  }
+}
+.blogs-card-container {
+  display: grid;
+  gap: 2rem; /* Adjust the gap between cards as needed */
+  grid-template-columns: repeat(2, 1fr);
+  align-items: stretch;
+}
+@media (min-width: 992px) {
+  .blogs-card-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 575px) {
+  .blogs-card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.blogs-card {
+  border: 2px solid #1e75bb30;
+  border-radius: 20px;
+  padding: 1rem;
+}
+.blogs-card span {
+  background-color: var(--primary);
+  font-family: var(--albert);
+  font-weight: 400;
+  color: white;
+  font-size: 14px;
+  padding: 2px 5px;
+  letter-spacing: 1px;
+}
+.blogs-card h4 {
+  color: var(--secondary);
+  font-weight: 700;
+  font-size: 1.25rem;
+  font-family: var(--albert);
+}
+.blogs-card p {
+  font-weight: 400;
+  font-family: var(--jakarta);
+  letter-spacing: 0.5px;
+  font-size: 14px;
+  color: #000000cc;
+}
+.blogs-card p other {
+  font-weight: 600;
+}
+.blogs-card img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+.latest-blogs h1 {
+  color: var(--secondary);
+  font-size: 42px;
+  font-weight: 700;
+  font-family: var(--albert);
+}
+.help-content-wrapper {
+  background-color: var(--primary);
+  padding: 3rem;
+  border-radius: 10px;
+}
+.help-wrapper h1 {
+  color: white;
+  font-size: 32px;
+  font-weight: 600;
+  font-family: var(--jakarta);
+  line-height: 1.5em;
+  letter-spacing: 0.5px;
+}
+.help-wrapper p {
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: var(--jakarta);
+}
+@media (max-width: 575px) {
+  .help-wrapper h1 {
+    font-size: 20px;
+  }
+  .help-content-wrapper {
+    padding: 2rem;
+  }
+}

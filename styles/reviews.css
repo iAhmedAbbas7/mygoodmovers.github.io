@@ -1,0 +1,212 @@
+/* Review Section Styles */
+/* .reviews-main {
+  border: 1px solid red;
+}
+.search-main {
+  border: 1px solid red;
+} */
+.review-heading h2,
+.search-heading h2,
+.states-heading h2 {
+  font-size: 32px;
+  font-weight: 700;
+  font-family: var(--albert);
+  color: var(--secondary);
+}
+.search-main .input-group input {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: #ececec9e;
+  font-family: var(--jakarta);
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0.375rem 0.75rem;
+}
+.search-main .input-group button {
+  border: none !important;
+  outline: none !important;
+  background: transparent !important;
+  width: 100%;
+}
+
+.search-main .input-group-text {
+  background-color: #ececec9e;
+  border: none !important;
+  outline: none !important;
+}
+.search-main .input-group .input-group-text button i {
+  font-weight: 900;
+  font-size: 18px;
+  color: var(--third);
+}
+.states-link ul li {
+  padding: 10px 0px;
+}
+.states-link ul li a {
+  color: var(--secondary);
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: 2px underline solid var(--four);
+  text-underline-offset: 8px;
+  font-family: var(--jakarta);
+}
+.cost-estimate h3 {
+  font-size: 22px;
+  font-weight: 600;
+  font-family: var(--albert);
+  color: var(--secondary);
+}
+.cost-estimate a span {
+  color: var(--primary);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.cost-estimate h5 {
+  color: var(--secondary);
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.moving-blogs h4 {
+  font-size: 22px;
+  font-weight: 600;
+  font-family: var(--albert);
+  color: var(--secondary);
+}
+.blogs-cards .blog-card .blog-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+}
+.blog-card h6 {
+  font-size: 17px;
+  font-weight: 600;
+  font-family: var(--albert);
+  color: var(--secondary);
+}
+.blog-card p {
+  font-family: 12px;
+  font-weight: 500;
+  font-family: var(--albert);
+  color: var(--secondary);
+}
+.review-card {
+  border: 2px solid #5fa3db66;
+  border-radius: 10px;
+}
+.review-card .card-top .card-logo img {
+  max-width: 100%;
+  object-fit: contain;
+  height: auto;
+}
+.header-info {
+  border-left: 2px solid #5fa3db66;
+}
+.header-info h3 {
+  font-size: 26px;
+  font-weight: 600;
+  font-family: var(--albert);
+  color: var(--secondary);
+}
+.header-info span {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--jakarta);
+  color: var(--secondary);
+}
+.header-info ul li span {
+  font-weight: 700;
+  font-family: var(--jakarta);
+  color: var(--secondary);
+}
+.header-info ul li i {
+  color: #ff6a00;
+  font-size: 18px;
+}
+.card-dot p {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--secondary);
+  font-family: var(--jakarta);
+}
+.card-dot p span {
+  font-weight: 700;
+}
+.quote-img img {
+  object-fit: contain;
+  background-position: center;
+  height: auto;
+  opacity: 0.1;
+}
+.card-review i {
+  font-size: 28px;
+  color: #2b2f32c2;
+}
+.card-review h4 {
+  font-size: 16px;
+  font-family: var(--albert);
+  color: var(--secondary);
+  font-weight: 600;
+}
+.review-text p {
+  font-family: var(--jakarta);
+  font-size: 16px;
+  font-weight: 400;
+  color: #2a2f32;
+}
+.review-text p span {
+  font-weight: 700;
+}
+.card-cost p {
+  font-family: var(--jakarta);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--secondary);
+}
+.card-location p {
+  font-family: var(--jakarta);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--primary);
+}
+.review-verify span {
+  font-size: 15px;
+  color: var(--primary);
+  font-weight: 600;
+  font-family: var(--jakarta);
+}
+.trusted-mover {
+    position: absolute;
+    top: -13px;
+    right: 35px;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 1px solid #1e74bb33;
+    font-family: var(--albert);
+    font-weight: 500;
+    padding: 2px 6px;
+    font-size: 12px;
+    border-radius: 30px;
+    box-shadow: rgb(30 117 187 / 44%) 0px 1px 4px;
+}
+@media (max-width: 575px) {
+  .header-info {
+    border: none;
+    padding-top: 1rem;
+  }
+  .header-logo img {
+    width: 40%;
+  }
+  .search-main {
+    padding-top: 3rem;
+  }
+}
+@media (max-width: 767px) {
+  .review-verify {
+    padding-bottom: 1rem;
+  }
+}

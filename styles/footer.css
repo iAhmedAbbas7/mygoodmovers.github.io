@@ -1,0 +1,229 @@
+/* Footer Styles */
+.footer-1 h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: var(--albert);
+  color: var(--secondary);
+  text-decoration: underline;
+}
+.footer-1 .e-mail {
+  color: var(--secondary);
+  font-family: var(--albert);
+  font-weight: 500;
+  font-size: 18px;
+  word-break: break-all;
+}
+.footer-1-socials a i {
+  font-size: 18px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid #1e75bb4f;
+  padding: 16px;
+  color: var(--primary);
+  transition: all 0.3s linear;
+}
+.footer-1-socials a i:hover {
+  background-color: var(--secondary);
+  color: white;
+  border: none;
+}
+.footer-1 .input-group {
+  box-shadow: rgb(30 117 187 / 44%) 0px 1px 4px;
+  border-radius: 4px;
+}
+.footer-1 .input-group input {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  font-weight: 400;
+  font-family: var(--jakarta);
+  padding-block: 0.8rem;
+}
+.footer-links-heading {
+  font-size: 30px;
+  font-weight: 600;
+  font-family: var(--albert);
+  color: var(--secondary);
+  text-decoration: underline;
+}
+.footer-links ul li a {
+  font-family: var(--albert);
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--secondary);
+}
+.footer-bottom {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.footer-copyright span {
+  color: var(--secondary);
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--jakarta);
+}
+.footer-privacy,
+.footer-privacy a {
+  color: var(--secondary);
+  font-family: var(--jakarta);
+  font-size: 16px;
+  font-weight: 500;
+}
+.mobile-footer {
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  border-top: 1px solid #0000003b;
+}
+@media (max-width: 767px) {
+  .footer-bottom {
+    padding-bottom: 4rem;
+  }
+}
+.footer-section i {
+  color: var(--secondary);
+  font-size: 22px;
+}
+.footer-section span {
+  font-weight: 700;
+  font-size: 16px;
+  font-family: var(--jakarta);
+  text-align: center;
+  color: var(--secondary);
+}
+.footer-section {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.footer-section.active {
+  transform: translateY(-15px);
+  background-color: var(--primary);
+}
+.footer-section.active span {
+  color: white;
+}
+.hidden-content {
+  display: none;
+  position: absolute;
+  bottom: 70px;
+  width: 100%;
+}
+.modal-backdrop.show {
+  opacity: 0.5;
+}
+.mover-input input {
+  background-color: white;
+  border: 2px solid #00000038;
+  color: var(--secondary);
+  outline: none !important;
+  box-shadow: none !important;
+  padding: 0.5rem;
+  border-radius: 5px;
+  width: 100%;
+}
+#quoteByPhoneModal .modal-content {
+  background-image: url("https://mygoodmovers.com/assets/image/banner_cover.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  margin: auto;
+}
+#quoteByPhoneModal .modal-header {
+  border-bottom: 2px solid #00000038;
+}
+#quoteByPhoneModal .modal-header button {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+#quoteByPhoneModal .modal-footer {
+  border-top: 2px solid #00000038;
+}
+#quoteByPhoneModal .modal-footer p {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--secondary);
+  font-family: var(--jakarta);
+}
+#quoteByPhoneModal .form-step label {
+  font-family: var(--jakarta);
+  color: #2b2f329c;
+  font-size: 16px;
+  font-weight: 600;
+}
+#quoteByPhoneModal .form-step .input-group span {
+  background-color: transparent;
+  border: 2px solid #00000038;
+  border-right: none !important;
+}
+#quoteByPhoneModal .form-step span i {
+  color: var(--primary);
+  font-size: 22px;
+}
+#quoteByPhoneModal .form-step .input-group input {
+  border-left: none !important;
+  border: 2px solid #00000038;
+  background-color: transparent;
+  font-family: var(--albert);
+  color: var(--secondary);
+  font-size: 15px;
+  outline: none !important;
+  box-shadow: none !important;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+#quoteByPhoneModal .form-step .input-group select {
+  border-left: none !important;
+  border: 2px solid #00000038;
+  background-color: transparent;
+  font-family: var(--albert);
+  color: var(--secondary);
+  font-size: 15px;
+  outline: none !important;
+  box-shadow: none !important;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+#quoteByPhoneModal .modal-headings h1 {
+  font-family: var(--albert);
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: var(--secondary);
+}
+#quoteByPhoneModal .modal-headings h2 {
+  font-family: var(--albert);
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: var(--primary);
+}
+#quoteByPhoneModal .modal-blue-button {
+  border: none !important;
+  outline: none !important;
+  background-color: var(--primary);
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  font-family: var(--jakarta);
+  font-size: 18px;
+  font-weight: 500;
+  padding: 6px 30px;
+  color: white;
+}
+#quoteByPhoneModal .modal-prev-button {
+  border: none !important;
+  outline: none !important;
+  background-color: var(--secondary);
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  font-family: var(--jakarta);
+  font-size: 18px;
+  font-weight: 500;
+  padding: 6px 30px;
+  color: white;
+}

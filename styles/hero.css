@@ -1,0 +1,101 @@
+/* Hero Section Styles */
+.hero-section {
+  background-image: url("https://mygoodmovers.com/assets/image/banner_cover.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: contain;
+}
+.hero-tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--albert);
+  background-color: var(--primary);
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+  padding: 5px 20px;
+  text-align: center;
+  border-radius: 50px;
+}
+.hero-tagline h1 {
+  font-family: var(--albert);
+  color: black;
+  font-weight: 700;
+  font-size: 56px;
+}
+.hero-img img {
+  width: 55%;
+  object-fit: cover;
+  height: auto;
+}
+.quote-section {
+  background-color: var(--primary);
+  color: white;
+}
+.quote {
+  font-family: var(--albert);
+  font-size: 26px;
+  font-weight: 400;
+}
+.star-warning {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: var(--jakarta);
+}
+.quote-form-field label {
+  font-family: var(--albert);
+  font-size: 15px;
+  font-weight: 400;
+}
+.quote-form-field span i {
+  color: #123269 !important;
+}
+.quote-form-field input {
+  outline: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  border: none !important;
+}
+.quote-save {
+  font-family: var(--albert);
+  font-size: 15px;
+  font-weight: 400;
+  text-align: center;
+}
+.quote-btn {
+  background-color: var(--secondary);
+  color: white;
+  font-weight: 500;
+  padding: 6px 30px;
+  text-align: center;
+  outline: none;
+  border-radius: 7px;
+  border: 2px solid white;
+}
+@media (max-width: 575px) {
+  .hero-tagline h1 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 1120px) {
+  .quote-section {
+    flex-direction: column !important;
+  }
+  .instant-quote,
+  .quote-form-field,
+  .quote-next {
+    width: 100% !important;
+  }
+  .quote-form-field {
+    flex-direction: column !important;
+  }
+  .q-f-1,
+  .q-f-2 {
+    width: 95% !important;
+  }
+  .quote-btn {
+    width: 75% !important;
+  }
+}
